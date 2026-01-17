@@ -1,0 +1,68 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import './styles/apple-design-system.css';
+
+@layer base {
+  * {
+    @apply border-apple-gray-200;
+  }
+
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, "SF Pro Text", "Helvetica Neue", sans-serif;
+    background-color: #fafafa;
+    color: #000000;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+}
+
+@layer components {
+
+  /* Apple-style glass panels - Light & Clean */
+  .glass-panel {
+    background-color: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.08);
+    @apply rounded-xl;
+  }
+
+  .glass-panel-subtle {
+    background-color: #ffffff;
+    border: 1px solid #e5e5e5;
+    box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1);
+    @apply rounded-xl;
+  }
+
+  /* Apple-style buttons */
+  .btn-apple {
+    @apply font-medium px-4 py-2 rounded-lg transition-all duration-200 ease-apple;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  .btn-apple-primary {
+    background-color: #000000;
+    color: #ffffff;
+    @apply hover:bg-gray-800 active:scale-95 shadow-sm hover:shadow-md;
+  }
+
+  .btn-apple-secondary {
+    background-color: #ffffff;
+    border: 1px solid #d4d4d4;
+    color: #000000;
+    @apply hover:bg-gray-50 active:scale-95;
+  }
+
+  .btn-apple-text {
+    color: #000000;
+    @apply bg-transparent hover:bg-gray-100 rounded-md;
+  }
+
+  /* Input fields override */
+  .input-apple {
+    @apply bg-white border border-gray-300 rounded-lg px-3 py-2 text-black focus:border-black focus:ring-1 focus:ring-black outline-none transition-all;
+  }
+}
