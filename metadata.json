@@ -1,0 +1,7 @@
+{
+  "name": "Storyboard AI",
+  "description": "An AI-powered application that takes user-provided story context (scripts, outlines, or text prompts) and generates dynamic, high-quality storyboard visuals with full creative control.",
+  "requestFramePermissions": [
+    "camera"
+  ]
+}
